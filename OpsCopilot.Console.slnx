@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/data/" />
+  <Folder Name="/runbooks/" />
+  <Folder Name="/Solution Items/">
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="OpsCopilot.Console/OpsCopilot.Console.csproj" />
+</Solution>

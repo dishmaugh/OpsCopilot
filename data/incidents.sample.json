@@ -1,0 +1,18 @@
+[
+  {
+    "id": "INC-1001",
+    "occurredUtc": "2026-03-12T14:22:00Z",
+    "service": "Payments",
+    "severity": "Sev2",
+    "rootCause": "Configuration drift",
+    "summary": "Timeouts after unreviewed config change."
+  },
+  {
+    "id": "INC-1002",
+    "occurredUtc": "2026-03-05T03:11:00Z",
+    "service": "Auth",
+    "severity": "Sev1",
+    "rootCause": "Expired certificate",
+    "summary": "Login failures due to cert rotation gap."
+  }
+]
