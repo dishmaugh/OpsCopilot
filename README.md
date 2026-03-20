@@ -1,10 +1,10 @@
-# OpsCopilot.Console
+# OpsCopilot
 
-OpsCopilot is a **C# / .NET 8 console application** built with **Semantic Kernel** and **Azure OpenAI** that demonstrates **explicit AI orchestration** for operational reporting.
+OpsCopilot is a C# / .NET 8 console application built with Semantic Kernel and Azure OpenAI that demonstrates explicit, enterprise-style AI orchestration for operational reporting.
 
-Instead of relying on autonomous agent behavior, the application explicitly gathers incident data and policy context, then invokes an LLM to generate a **grounded, auditable Markdown report**.
+Instead of relying on autonomous agent behavior, the application explicitly gathers incident data and policy context, then invokes an LLM to generate a grounded, auditable Markdown report.
 
-This project is designed as a **portfolio demo** for enterprise-style AI integration in existing .NET systems.
+This project is designed as a portfolio demo for enterprise-style AI integration in existing .NET systems.
 
 ---
 
@@ -199,11 +199,11 @@ Potential extensions for future versions:
 
 ## Why this repo exists
 
-I built this project to demonstrate a practical approach to **enterprise AI orchestration in .NET**:
+I built this project to demonstrate a practical approach to enterprise AI orchestration in .NET:
 
 - start with trusted inputs
 - keep control flow explicit
 - make outputs reviewable
 - avoid “magic” where reliability matters
 
-For my background in **SQL-heavy operational systems and production support**, this reflects the kind of AI work I’m most interested in: **integrating LLMs into real systems responsibly**.
+Given my background in SQL-heavy operational systems and production support, this reflects the kind of AI work I’m most interested in: integrating LLMs into real systems responsibly, where trust boundaries and auditability matter.
