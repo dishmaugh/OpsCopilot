@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Microsoft.SemanticKernel;
 
 namespace OpsCopilot.Console.Plugins;
 
@@ -9,7 +8,7 @@ public sealed class PolicyPlugin
 
     public PolicyPlugin(string runbooksDir) => _runbooksDir = runbooksDir;
 
-    [KernelFunction, Description("Get a runbook snippet for a topic. Returns Markdown text.")]
+    [Description("Get a runbook snippet for a topic. Returns Markdown text.")]
     public string GetRunbook(
         [Description("Topic name, e.g. 'postmortem' or 'change-management'")] string topic)
     {
@@ -23,5 +22,23 @@ public sealed class PolicyPlugin
         var lines = File.ReadAllLines(path).Take(80);
         return string.Join(Environment.NewLine, lines);
     }
+
+    [Description("Return the postmortem policy used for incident reviews and follow-up actions.")]
+    public string GetPostmortemPolicy()
+    {
+        System.Console.WriteLine("[TOOL] GetPostmortemPolicy()");
+        return GetRunbook("postmortem");
+    }
+    //public string GetPostmortemPolicy()
+    //    => GetRunbook("postmortem");
+
+    [Description("Return the change management policy used for production changes, reviews, rollbacks, configuration changes, and certificate rotation.")]
+    public string GetChangeManagementPolicy()
+    {
+        System.Console.WriteLine("[TOOL] GetChangeManagementPolicy()");
+        return GetRunbook("change-management");
+    }
+    //public string GetChangeManagementPolicy()
+    //    => GetRunbook("change-management");
 }
 
